@@ -9,8 +9,31 @@ secret_word = "food"
 
 # Task 1
 def check_text():
-    """ Add your docstring """
-    pass
+    """ this function will get input from the user and detect if they have used the secret word. Runs an endless loop untill they do. """
+    sent =[]
+    value = False
+    
+    sen1 = False
+    sen2 = False
+    
+    
+    while sen1 == False and sen2 == False:
+        sent = input("Give me a sentence: ").split()
+        for elem in sent:
+            if elem == secret_word:
+                sen1 =True
+            elif elem == "dog" or elem == "Dog":
+                sen2 = True
+                
+        if sen1 == False and sen2 == False:
+            print("Try again")
+        
+    if sen1 == True:
+        print("You used the secret word!")
+    if sen2 == True:
+        print("You used the word " "\"dog\"" " or the word" """ "Dog" """)
+        
+    
 
 
 

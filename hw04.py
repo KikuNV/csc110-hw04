@@ -109,7 +109,8 @@ def my_while_loop():
             print("Goodbye")
             return
         elif option == "c":
-            exit
+            exit()
+            print("a")
         
         
 
